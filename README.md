@@ -10,6 +10,8 @@ Once the profile is initialized , the script also expects a key-pair to login to
 
 Once done , terraform init> terraform plan > terraform apply will setup all the resources .
 
+Also , this POC was not tested for the rpc implemetation . The config.toml files were checked and the rpc ports were enabled . However for the rpc to be available , the blockchain data had to be completely seeded . Due to time constraints , this part was not done/tested.
+
 <h2> Architectural Design </h2>
 
 The design shown in this demo shows only a sigle client. The POC just showcases how to run the client and manage the upgrade of the client after a certain height.
