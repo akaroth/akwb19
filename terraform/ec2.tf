@@ -20,8 +20,8 @@ version = "~> 3.0"
 name = "cdc"
 
 ami                    = data.aws_ami.ubuntu.id
-instance_type          = "t2.medium"
-key_name               = "cdc"
+instance_type          = var.instance-type
+key_name               = var.key_name
 vpc_security_group_ids = [module.ec2_sg_cdc.security_group_id]
 subnet_id              = element(aws_subnet.public_subnet.*.id, 0)
 iam_instance_profile   = aws_iam_instance_profile.cdc_profile.name

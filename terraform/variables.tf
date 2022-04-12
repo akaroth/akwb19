@@ -25,5 +25,9 @@ variable "private_subnets_cidr" {
 }
 
 variable "instance-type" {
-  default = "t2.micro"
+  default = "t2.medium"
+}
+
+variable "key_name" {
+  default = "cdc"
 }
