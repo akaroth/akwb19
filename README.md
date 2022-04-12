@@ -16,7 +16,7 @@ This POC is running the mainnet of the CDC blockchain.
 
 </h2> Current limitation </h2>
 
-* The current module used for imlementing security groups has been observed not to create the outbound rules even when specified . this mostly is a bug and can be fixed by using another module or an egress resource rule like here (https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#usage-with-prefix-list-ids)
+* The current module used for imlementing security groups has been observed not to create the outbound rules even when specified . this mostly is a bug and can be fixed by using another module or an egress resource rule like [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#usage-with-prefix-list-ids).
 * Monitoring is not implemented . 
 * suggested to store on Key Management Service (KMS) backed solutions. Applications need to integrate the SDK to automate this process. 
 * Grant least privilege to your users - never grant unnecessary permissions to your users or applications. 
