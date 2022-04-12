@@ -18,11 +18,9 @@ This POC is running the mainnet of the CDC blockchain.
 </h2> Current limitation </h2>
 
 * The current module used for imlementing security groups has been observed not to create the outbound rules even when specified . this mostly is a bug and can be fixed by using another module or an egress resource rule like [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#usage-with-prefix-list-ids).
-* Monitoring is not implemented . 
-* suggested to store on Key Management Service (KMS) backed solutions. Applications need to integrate the SDK to automate this process. 
-* Grant least privilege to your users - never grant unnecessary permissions to your users or applications. 
-* Manage your Infrastructure as Code -  Manage the infrastructure, configuration as code to automate and make implementations consistent with designs.
-
+* Monitoring is not implemented . If monitoring is enabled , assuming there be an exporter to work with prometheus , the block height can be checked and alerted when the block height reaches a certain level . At this point the script(restart_new_client.sh) created to change the client can be triggered.
+* This is a standalone node implementation , meaning if the node goes down , the service stops . The ideal implementation would be nodes running in an ASG proxied by a ELB and fronted by a Cloudfront which may also be used cache data which doesnt change much. 
+* No configuration tool like Ansible used . These tools can help manage the change of client in case there are large number of nodes 
 
 <h2> DevOps Guidelines and Best Practices </h2>
 
