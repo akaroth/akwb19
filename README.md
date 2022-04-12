@@ -2,7 +2,8 @@
 
 <h2> Requirements </h2>
 
-Terraform >= 0.14.5
+Terraform >= 0.14.5.
+
 Platform used is AWS . The api keys used to interact with an AWS account is expected to available locally as an env variable. This can be configured by following this [guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html).
 Once the profile is initialized , the script also expects a key-pair to login to the system . This can be avoided by either configuring ssm client to work with systems manager . If using keys, please change the name of the key used in the variables.tf file.
 
