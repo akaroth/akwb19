@@ -15,7 +15,7 @@ The design shown in this demo shows only a sigle client. The POC just showcases 
 This POC is running the mainnet of the CDC blockchain.
 
 
-</h2> Current limitation </h2>
+<h2> Current limitation </h2>
 
 * The current module used for imlementing security groups has been observed not to create the outbound rules even when specified . this mostly is a bug and can be fixed by using another module or an egress resource rule like [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group_rule#usage-with-prefix-list-ids).
 * Monitoring is not implemented . If monitoring is enabled , assuming there be an exporter to work with prometheus , the block height can be checked and alerted when the block height reaches a certain level . At this point the script(restart_new_client.sh) created to change the client can be triggered.
